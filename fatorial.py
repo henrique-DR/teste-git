@@ -1,4 +1,4 @@
-# #Fatorial com *for*
+# #Fatorial com *for* (iterativo)
 # print('====== Fatorial ======')
 # # def fatorial(n: int) -> int:
 #     res = 1
@@ -6,7 +6,7 @@
 #         res *= i
 #     return res
 
-#Fatorial com *while*
+#Fatorial com *while* (iterativo)
 def fatorial(n):
     i = 0
     fat = 1
@@ -15,5 +15,15 @@ def fatorial(n):
         fat*=i
     return fat
 
+
+#Fatorial Recursivo
 n = int(input('Número para fatorar: '))
 print(f'O fatorial de {n} é {fatorial(n)}')
+
+
+
+def fatorial_rec(n: int) -> int:
+    if(n <= 1):
+        return 1
+    else:
+        return n * fatorial_rec(n - 1)
